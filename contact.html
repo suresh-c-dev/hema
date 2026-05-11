@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Hema K R</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">HEMA K R</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>Feel free to reach out for collaborations or inquiries</p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-info-item card" style="margin-bottom: 1.5rem;">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.2rem;">Email</h4>
+                                <p style="color: var(--text-secondary);">hemaankithakr@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item card" style="margin-bottom: 1.5rem;">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.2rem;">Phone</h4>
+                                <p style="color: var(--text-secondary);">+91 8951122613</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 style="margin-bottom: 0.2rem;">Address</h4>
+                                <p style="color: var(--text-secondary);">
+                                    Karikere, NO 25, Konehalli ( P ) Tiptur (R) Tumkur (D) 572201 Karnataka
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <form id="contactForm">
+                            <div class="grid grid-2">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="formStatus" style="margin-top: 1rem; text-align: center; display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">HEMA K R</a>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">Building innovative solutions through technology and academic excellence.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="projects.html">My Projects</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hemaankithakr@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 8951122613</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hema K R. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            status.style.display = 'block';
+            status.style.color = 'var(--primary-accent)';
+            status.textContent = 'Sending message...';
+            
+            setTimeout(() => {
+                status.textContent = 'Message sent successfully! (This is a demo)';
+                this.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
